@@ -48,6 +48,7 @@ if has("gui_macvim")
   set guifont=Inconsolata:h14.00
   " set relativenumber
   set undofile
+  let macvim_hig_shift_movement = 1
 endif
 
 
@@ -79,10 +80,10 @@ set list
 set listchars=tab:▸\ ,eol:¬
 
 " Movement - Turn off the arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
+nnoremap <up> gk
+nnoremap <down> gj
+nnoremap <left> h
+nnoremap <right> l
 "inoremap <up> <nop>
 "inoremap <down> <nop>
 "inoremap <left> <nop>
