@@ -41,11 +41,13 @@ vnoremap <tab> %
 
 " MacVIM stuff
 if has("gui_macvim")
-  colorscheme shilight
+  colorscheme jellybeans
   set transparency=2
   set go-=T
   set lines=45
   set guifont=Inconsolata:h14.00
+  " set relativenumber
+  set undofile
 endif
 
 
@@ -67,11 +69,6 @@ set visualbell
 set ttyfast
 set backspace=indent,eol,start
 set laststatus=2
-
-if has("gui_macvim")
-  set relativenumber
-  set undofile
-endif
 
 set wrap
 set textwidth=79
