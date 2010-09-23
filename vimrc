@@ -59,7 +59,8 @@ filetype plugin indent on
 set modelines=0
 set encoding=utf-8
 set scrolloff=3
-set autoindent
+set noautoindent
+set noai
 set showmode
 set showcmd
 set hidden
@@ -104,4 +105,4 @@ nnoremap <C-l> <C-w>l
 " load .vim/bundles
 call pathogen#runtime_append_all_bundles()
 
-"
+let g:SimpleJsIndenter_BriefMode = 1
