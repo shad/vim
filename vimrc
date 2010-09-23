@@ -10,7 +10,7 @@ set expandtab
 set noeb                      " no error bell
 
 
-let mapleader = ","           " Remap the leader to be , instead of \
+" let mapleader = ","           " Remap the leader to be , instead of \
 
 " wrap lines
 " VIM Info File
