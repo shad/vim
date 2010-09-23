@@ -52,6 +52,9 @@ if has("gui_macvim")
 endif
 
 
+" load .vim/bundles
+call pathogen#runtime_append_all_bundles()
+
 " From http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 filetype off
 filetype plugin indent on
@@ -81,10 +84,10 @@ set list
 set listchars=tab:▸\ ,eol:¬
 
 " Movement - Turn off the arrow keys
-nnoremap <up> gk
-nnoremap <down> gj
-nnoremap <left> h
-nnoremap <right> l
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
 "inoremap <up> <nop>
 "inoremap <down> <nop>
 "inoremap <left> <nop>
@@ -102,7 +105,5 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" load .vim/bundles
-call pathogen#runtime_append_all_bundles()
 
 let g:SimpleJsIndenter_BriefMode = 1
