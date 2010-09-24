@@ -4,9 +4,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = http://github.com/tpope/vim-surround.git
-[submodule "bundle/simple-javascript-indenter"]
-	path = bundle/simple-javascript-indenter
-	url = http://github.com/JiangMiao/simple-javascript-indenter.git
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = http://github.com/tpope/vim-rails.git
@@ -19,3 +16,6 @@
 [submodule "bundle/vim-vividchalk"]
 	path = bundle/vim-vividchalk
 	url = http://github.com/tpope/vim-vividchalk.git
+[submodule "bundle/vim-javascript"]
+	path = bundle/vim-javascript
+	url = http://github.com/pangloss/vim-javascript.git
