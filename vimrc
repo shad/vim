@@ -1,7 +1,6 @@
 syntax on
 
 set nocp
-set background=dark
 set shiftwidth=2
 set tabstop=2
 set smartindent
@@ -42,6 +41,7 @@ vnoremap <tab> %
 " MacVIM stuff
 if has("gui_macvim")
   colorscheme jellybeans
+  set background=dark
   set transparency=2
   set go-=T
   set lines=45
@@ -49,6 +49,10 @@ if has("gui_macvim")
   " set relativenumber
   set undofile
   let macvim_hig_shift_movement = 1
+else
+  highlight clear
+  " colorscheme default
+  set background=light
 endif
 
 
