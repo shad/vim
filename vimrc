@@ -7,9 +7,8 @@ set smartindent
 set expandtab
 
 set noeb                      " no error bell
+set visualbell                " visual error bell
 
-
-" let mapleader = ","           " Remap the leader to be , instead of \
 
 " wrap lines
 " VIM Info File
@@ -46,12 +45,10 @@ if has("gui_macvim")
   set go-=T
   set lines=45
   set guifont=Inconsolata:h14.00
-  " set relativenumber
   set undofile
   let macvim_hig_shift_movement = 1
 else
   highlight clear
-  " colorscheme default
   set background=light
 endif
 
@@ -65,7 +62,7 @@ filetype plugin indent on
 
 set modelines=0
 set encoding=utf-8
-set scrolloff=3
+set scrolloff=3       " Keep 3 lines on the screen for context when scrolling
 set noautoindent
 set noai
 set showmode
@@ -73,7 +70,6 @@ set showcmd
 set hidden
 set wildmenu
 set wildmode=list:longest
-set visualbell
 "set cursorline  " show the current line
 set ttyfast
 set backspace=indent,eol,start
@@ -92,6 +88,7 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+" Leave arrow keys on in Insert mode
 "inoremap <up> <nop>
 "inoremap <down> <nop>
 "inoremap <left> <nop>
@@ -99,7 +96,7 @@ nnoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-" Custom Commands
+" Custom Window Commands
 " Open this file in a vertical window next to this one
 nnoremap <leader>w <C-w>v<C-w>l
 
@@ -110,4 +107,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 
-let g:SimpleJsIndenter_BriefMode = 1
+" TextMate like Line Commenting (depends on NERDCommenter)
+imap <D-/> <ESC>\c<space>i
+nmap <D-/> \c<space>
+vmap <D-/> \c<space>
