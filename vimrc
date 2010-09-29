@@ -39,7 +39,7 @@ vnoremap <tab> %
 
 " MacVIM stuff
 if has("gui_macvim")
-  colorscheme jellybeans
+  colorscheme tmtwilight
   set background=dark
   set transparency=2
   set go-=T
