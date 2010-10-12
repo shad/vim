@@ -1,6 +1,12 @@
+set nocompatible
+autocmd!
+filetype off
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+filetype plugin indent on
 syntax on
 
-set nocp
+
 set shiftwidth=2
 set tabstop=2
 set smartindent
@@ -55,15 +61,6 @@ else
   highlight clear
   set background=light
 endif
-
-
-" load .vim/bundles
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
-
-" From http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-filetype off
-filetype plugin indent on
 
 set modelines=0
 set encoding=utf-8
