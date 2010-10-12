@@ -65,19 +65,22 @@ function! SetArrowKeysAsTextShifters()
     " inoremap <silent> <C-Up> <Esc>:call DelEmptyLineBelow()<CR>a
     " inoremap <silent> <C-Down> <Esc>:call AddEmptyLineBelow()<CR>a
  
-    " disable modified versions we are not using
-    " nnoremap  <S-Up>     <NOP>
-    " nnoremap  <S-Down>   <NOP>
+    " Bubble lines up
+    nmap  <S-Up>     ddkP
+    nmap  <S-Down>   ddp
+    " Bubble lines down
+    vmap  <S-Up>     xkP`[V`]
+    vmap  <S-Down>   xp`[V`]
+
     " nnoremap  <S-Left>   <NOP>
     " nnoremap  <S-Right>  <NOP>
-    " vnoremap  <S-Up>     <NOP>
-    " vnoremap  <S-Down>   <NOP>
     " vnoremap  <S-Left>   <NOP>
     " vnoremap  <S-Right>  <NOP>
     " inoremap  <S-Up>     <NOP>
     " inoremap  <S-Down>   <NOP>
     " inoremap  <S-Left>   <NOP>
     " inoremap  <S-Right>  <NOP>
+
 endfunction
  
 call SetArrowKeysAsTextShifters()
