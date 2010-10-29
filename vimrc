@@ -54,7 +54,7 @@ if has("gui_macvim")
   "set transparency=2
   set go-=T
   set lines=50
-  set guifont=Inconsolata:h14.00
+  set guifont=Meslo\ LG\ M\ DZ:h12
   set undofile
   let macvim_hig_shift_movement = 1
 else
@@ -120,3 +120,6 @@ if exists('*HexHighlight()')
   nmap <leader>h :call HexHighlight()<Return>
 endif
   
+" NERDTree helper
+" Open the current file in NERDTree
+:nmap <leader>o :NERDTreeFind<CR>
