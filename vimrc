@@ -122,4 +122,5 @@ endif
   
 " NERDTree helper
 " Open the current file in NERDTree
-:nmap <leader>o :NERDTreeFind<CR>
+:nmap <leader>i :NERDTreeFind<CR>
+:nmap <leader>o :BufExplorer<CR>
