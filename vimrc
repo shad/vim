@@ -6,6 +6,7 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
+let g:CommandTMatchWindowAtTop=1
 
 set shiftwidth=2
 set tabstop=2
@@ -32,6 +33,7 @@ set whichwrap+=<,>,[,]
 " I hate swap files
 set nobackup
 set noswapfile
+set directory=~/.vim/temp/
 
 " searching
 set diffopt=filler,iwhite     " ignore all whitespace and sync
@@ -122,5 +124,9 @@ endif
   
 " NERDTree helper
 " Open the current file in NERDTree
-:nmap <leader>i :NERDTreeFind<CR>
-:nmap <leader>o :BufExplorer<CR>
+nmap <leader>i :NERDTreeFind<CR>
+nmap <leader>o :BufExplorer<CR>
+
+ino jj <esc>
+cno jj <c-c>
+
