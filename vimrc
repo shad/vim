@@ -53,17 +53,17 @@ vnoremap <tab> %
 if has("gui_macvim")
   set background=dark
   colorscheme tmtwilight
-  "set transparency=2
-  set go-=T
+  set transparency=2
+  set go=egm
   set lines=50
   set guifont=Meslo\ LG\ M\ DZ:h12
-  set undofile
   let macvim_hig_shift_movement = 1
 else
   highlight clear
   set background=light
 endif
 
+set noundofile " I hate undo files... not sure why I would want them...
 set modelines=0
 set encoding=utf-8
 set scrolloff=3       " Keep 3 lines on the screen for context when scrolling
@@ -85,10 +85,6 @@ set formatoptions=qrn1
 
 set list
 set listchars=tab:▸\ ,eol:¬
-
-" Movement is disabled by shift-movers
-" and replaced by text movement
-
 
 " Mappings to move across linewraps in a nicer way
 nnoremap j gj
