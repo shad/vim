@@ -1,5 +1,6 @@
 " Vim color file
 " Converted from Textmate theme Twilight using Coloration v0.2.4 (http://github.com/sickill/coloration)
+" Lots of improvements by Shad Reynolds http://shad.github.com
 
 set background=dark
 highlight clear
@@ -14,15 +15,15 @@ hi Cursor  guifg=NONE guibg=#a7a7a7 gui=NONE
 hi Visual  guifg=NONE guibg=#3c4043 gui=NONE
 hi CursorLine  guifg=NONE guibg=#1b1b1b gui=NONE
 hi CursorColumn  guifg=NONE guibg=#1b1b1b gui=NONE
-hi LineNr  guifg=#868686 guibg=#141414 gui=NONE
-hi VertSplit  guifg=#3f3f3f guibg=#3f3f3f gui=NONE
+hi LineNr  guifg=#868686 guibg=#222222 gui=NONE
+hi VertSplit  guifg=#777777 guibg=#3f3f3f gui=NONE
 hi MatchParen  guifg=#cda869 guibg=NONE gui=NONE
 hi StatusLine  guifg=#f8f8f8 guibg=#3f3f3f gui=bold
 hi StatusLineNC  guifg=#f8f8f8 guibg=#3f3f3f gui=NONE
 hi Pmenu  guifg=#9b703f guibg=NONE gui=NONE
 hi PmenuSel  guifg=NONE guibg=#3c4043 gui=NONE
-hi IncSearch  guifg=NONE guibg=#343a44 gui=NONE
-hi Search  guifg=#f0a0c0 guibg=#302028 gui=underline
+hi IncSearch  guifg=#ffffff guibg=#E60BFF gui=bold
+hi Search  guifg=#0080FF guibg=#0F315D gui=underline
 hi Directory  guifg=#cf6a4c guibg=NONE gui=NONE
 hi Folded  guifg=#5f5a60 guibg=#141414 gui=NONE
 

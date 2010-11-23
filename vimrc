@@ -114,9 +114,9 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
-if exists('*HexHighlight()')
-  nmap <leader>h :call HexHighlight()<Return>
-endif
+
+
+nmap <leader>h :call HexHighlight()<Return>
   
 " NERDTree helper
 " Open the current file in NERDTree

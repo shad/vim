@@ -17,7 +17,7 @@ function! HexHighlight()
                 let hexLineMatch = 1
                 while match(currentLine, '#\x\{6}', 0, hexLineMatch) != -1
                     let hexMatch = matchstr(currentLine, '#\x\{6}', 0, hexLineMatch)
-                    exe 'hi hexColor'.hexGroup.' guifg='.hexMatch.' guibg='.hexMatch
+                    exe 'hi hexColor'.hexGroup.' guifg=#ffffff guibg='.hexMatch.' gui=bold'
                     exe 'let m = matchadd("hexColor'.hexGroup.'", "'.hexMatch.'", 25, '.hexGroup.')'
                     let s:HexColors += ['hexColor'.hexGroup]
                     let hexGroup += 1
