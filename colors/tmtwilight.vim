@@ -1,7 +1,7 @@
 " Vim color file
-" Converted from Textmate theme Twilight using Coloration v0.2.4 (http://github.com/sickill/coloration)
+" Converted from Textmate theme Twilight using Coloration v0.2.4 
+" (http://github.com/sickill/coloration)
 " Lots of improvements by Shad Reynolds http://shad.github.com
-
 set background=dark
 highlight clear
 
@@ -11,15 +11,16 @@ endif
 
 let g:colors_name = "Twilight"
 
-hi Cursor  guifg=NONE guibg=#a7a7a7 gui=NONE
+hi Cursor  guifg=NONE guibg=#999999 gui=NONE
 hi Visual  guifg=NONE guibg=#3c4043 gui=NONE
 hi CursorLine  guifg=NONE guibg=#1b1b1b gui=NONE
 hi CursorColumn  guifg=NONE guibg=#1b1b1b gui=NONE
-hi LineNr  guifg=#868686 guibg=#222222 gui=NONE
-hi VertSplit  guifg=#777777 guibg=#3f3f3f gui=NONE
+hi ColorColumn  guifg=NONE guibg=#1d1d1d gui=NONE
+hi LineNr  guifg=#AAAAAA guibg=#292929 gui=NONE
+hi VertSplit  guifg=#777777 guibg=#444444 gui=NONE
 hi MatchParen  guifg=#cda869 guibg=NONE gui=NONE
-hi StatusLine  guifg=#f8f8f8 guibg=#3f3f3f gui=bold
-hi StatusLineNC  guifg=#f8f8f8 guibg=#3f3f3f gui=NONE
+hi StatusLine  guifg=#ffffff guibg=#555555 gui=bold
+hi StatusLineNC  guifg=#aaaaaa guibg=#3f3f3f gui=NONE
 hi Pmenu  guifg=#9b703f guibg=NONE gui=NONE
 hi PmenuSel  guifg=NONE guibg=#3c4043 gui=NONE
 hi IncSearch  guifg=#ffffff guibg=#E60BFF gui=bold

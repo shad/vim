@@ -65,7 +65,7 @@ vnoremap <tab> %
 if has("gui_macvim")
   set background=dark
   colorscheme tmtwilight
-  set transparency=2
+  set transparency=1
   set go=egm
   set lines=50
   set guifont=Meslo\ LG\ M\ DZ:h12
@@ -90,8 +90,8 @@ set laststatus=2
 
 set formatoptions=qrn1
 
-"set colorcolumn=85
-"set cursorline  " show the current line
+set colorcolumn=80
+set cursorline  " show the current line
 
 " Show invisible chars for tabs and line endings
 set list
