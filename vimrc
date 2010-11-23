@@ -1,3 +1,11 @@
+" 
+" .vimrc
+" This is my VIM configuration.  There are many like it, but this one is mine.
+" Shad Reynolds
+" http://github.com/shad/vim
+"
+
+" Standard setup & pathogen integration
 set nocompatible
 autocmd!
 filetype off
@@ -6,32 +14,36 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
+" I like command-t to be at the top of the window (not the bottom)
 let g:CommandTMatchWindowAtTop=1
 
+" Tab stuff
 set shiftwidth=2
 set tabstop=2
 set smartindent
 set expandtab
 
+" Notifications & Visual stuff
 set noeb                      " no error bell
 set visualbell                " visual error bell
+set ruler                     " show the line number on the bar
+set autoread                  " watch for file changes
+set number                    " line numbers
 set cul                       " show cursor line
 
-" wrap lines
 " VIM Info File
 set vi=%,'50
 set vi+=\"100,:100
 set vi+=n~/.viminfo
 
-
-set ruler                     " show the line number on the bar
-set autoread                  " watch for file changes
-set number                    " line numbers
-
+" Wrap
 set whichwrap+=<,>,[,]
+set wrap
+set textwidth=79
 
-" I hate swap files
+" I hate swap files, backup files and undo files.
 set nobackup
+set noundofile
 set noswapfile
 set directory=~/.vim/temp/
 
@@ -63,7 +75,6 @@ else
   set background=light
 endif
 
-set noundofile " I hate undo files... not sure why I would want them...
 set modelines=0
 set encoding=utf-8
 set scrolloff=3       " Keep 3 lines on the screen for context when scrolling
@@ -73,20 +84,20 @@ set showcmd
 set hidden
 set wildmenu
 set wildmode=list:longest
-"set cursorline  " show the current line
 set ttyfast
 set backspace=indent,eol,start
 set laststatus=2
 
-set wrap
-set textwidth=79
 set formatoptions=qrn1
-" set colorcolumn=85
 
+"set colorcolumn=85
+"set cursorline  " show the current line
+
+" Show invisible chars for tabs and line endings
 set list
 set listchars=tab:▸\ ,eol:¬
 
-"snipmate setup
+" snipmate setup
 try
   source ~/.vim/snippets/support_functions.vim
 catch
@@ -94,13 +105,11 @@ catch
 endtry
 autocmd vimenter * call s:SetupSnippets()
 function! s:SetupSnippets()
-
     "if we're in a rails env then read in the rails snippets
     if filereadable("./config/environment.rb")
         call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
         call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
     endif
-
     call ExtractSnips("~/.vim/snippets/html", "eruby")
     call ExtractSnips("~/.vim/snippets/html", "xhtml")
     call ExtractSnips("~/.vim/snippets/html", "php")
@@ -137,13 +146,15 @@ function! <SID>SynStack()
 endfunc
 
 
+" Highlight Hex Colors in CSS #EEEEEE
 nmap <leader>h :call HexHighlight()<Return>
   
-" NERDTree helper
-" Open the current file in NERDTree
+" NERDTree helper - Open the current file in NERDTree
 nmap <leader>i :NERDTreeFind<CR>
+" Open the buffer explorer  (MRU Files)
 nmap <leader>o :BufExplorer<CR>
 
+" Use jj to jump out of insert mode (hit quickly)
 ino jj <esc>
 cno jj <c-c>
 
