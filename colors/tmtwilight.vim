@@ -31,7 +31,7 @@ hi Folded  guifg=#5f5a60 guibg=#141414 gui=NONE
 hi Normal  guifg=#f8f8f8 guibg=#141414 gui=NONE
 hi Boolean  guifg=#cf6a4c guibg=NONE gui=NONE
 hi Character  guifg=#cf6a4c guibg=NONE gui=NONE
-hi Comment  guifg=#5f5a60 guibg=NONE gui=italic
+hi Comment  guifg=#777777 guibg=NONE gui=italic
 hi Conditional  guifg=#cda869 guibg=NONE gui=NONE
 hi Constant  guifg=#cf6a4c guibg=NONE gui=NONE
 hi Define  guifg=#cda869 guibg=NONE gui=NONE
@@ -42,7 +42,7 @@ hi Function  guifg=#9b703f guibg=NONE gui=NONE
 hi Identifier  guifg=#f9ee98 guibg=NONE gui=NONE
 hi Keyword  guifg=#cda869 guibg=NONE gui=NONE
 hi Label  guifg=#8f9d6a guibg=NONE gui=NONE
-hi NonText  guifg=#4f4f4f guibg=#1b1b1b gui=NONE
+hi NonText  guifg=#3f3f3f guibg=#141414 gui=NONE
 hi Number  guifg=#cf6a4c guibg=NONE gui=NONE
 hi Operator  guifg=#cda869 guibg=NONE gui=NONE
 hi PreProc  guifg=#cda869 guibg=NONE gui=NONE
