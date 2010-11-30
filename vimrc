@@ -43,7 +43,6 @@ set textwidth=79
 
 " I hate swap files, backup files and undo files.
 set nobackup
-set noundofile
 set noswapfile
 set directory=~/.vim/temp/
 
@@ -61,18 +60,28 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-" MacVIM stuff
 if has("gui_macvim")
+
+  " MacVIM stuff
   set background=dark
   colorscheme tmtwilight
   set transparency=1
   set go=egm
   set lines=50
   set guifont=Meslo\ LG\ M\ DZ:h12
+  set noundofile
+  set colorcolumn=80
+
+  let g:VMPoutputdirectory = '.'       " Markdown Preview Output
   let macvim_hig_shift_movement = 1
+
 else
+
+  " Commandline VI Mode
   highlight clear
   set background=light
+  let g:LustyJugglerSuppressRubyWarning = 1
+
 endif
 
 set modelines=0
@@ -90,7 +99,6 @@ set laststatus=2
 
 set formatoptions=qrn1
 
-set colorcolumn=80
 set cursorline  " show the current line
 
 " Show invisible chars for tabs and line endings
