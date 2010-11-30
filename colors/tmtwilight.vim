@@ -56,6 +56,9 @@ hi Title  guifg=#f8f8f8 guibg=NONE gui=bold
 hi Todo  guifg=#5f5a60 guibg=NONE gui=inverse,bold,italic
 hi Type  guifg=#9b703f guibg=NONE gui=NONE
 hi Underlined  guifg=NONE guibg=NONE gui=underline
+
+
+" Ruby
 hi rubyClass  guifg=#cda869 guibg=NONE gui=NONE
 hi rubyFunction  guifg=#9b703f guibg=NONE gui=NONE
 hi rubyInterpolationDelimiter  guifg=NONE guibg=NONE gui=NONE
@@ -79,21 +82,31 @@ hi rubyRailsARAssociationMethod  guifg=#dad085 guibg=NONE gui=NONE
 hi rubyRailsARMethod  guifg=#dad085 guibg=NONE gui=NONE
 hi rubyRailsRenderMethod  guifg=#dad085 guibg=NONE gui=NONE
 hi rubyRailsMethod  guifg=#dad085 guibg=NONE gui=NONE
+
+" ERuby
 hi erubyDelimiter  guifg=NONE guibg=NONE gui=NONE
 hi erubyComment  guifg=#5f5a60 guibg=NONE gui=italic
 hi erubyRailsMethod  guifg=#dad085 guibg=NONE gui=NONE
+
+" HTML
 hi htmlTag  guifg=#ac885b guibg=NONE gui=NONE
 hi htmlEndTag  guifg=#ac885b guibg=NONE gui=NONE
 hi htmlTagName  guifg=#ac885b guibg=NONE gui=NONE
 hi htmlArg  guifg=#ac885b guibg=NONE gui=NONE
 hi htmlSpecialChar  guifg=#cf6a4c guibg=NONE gui=NONE
+
+" javascript
 hi javaScriptFunction  guifg=#f9ee98 guibg=NONE gui=NONE
 hi javaScriptRailsFunction  guifg=#dad085 guibg=NONE gui=NONE
 hi javaScriptBraces  guifg=NONE guibg=NONE gui=NONE
+
+" YAML
 hi yamlKey  guifg=#9b703f guibg=NONE gui=NONE
 hi yamlAnchor  guifg=#7587a6 guibg=NONE gui=NONE
 hi yamlAlias  guifg=#7587a6 guibg=NONE gui=NONE
 hi yamlDocumentHeader  guifg=#8f9d6a guibg=NONE gui=NONE
+
+" CSS
 hi cssURL  guifg=#7587a6 guibg=NONE gui=NONE
 hi cssFunctionName  guifg=#dad085 guibg=NONE gui=NONE
 hi cssColor  guifg=#cf6a4c guibg=NONE gui=NONE
@@ -103,3 +116,14 @@ hi cssValueLength  guifg=#cf6a4c guibg=NONE gui=NONE
 hi cssCommonAttr  guifg=#cf6a4c guibg=NONE gui=NONE
 hi cssBraces  guifg=NONE guibg=NONE gui=NONE
 
+
+" markdown
+hi markdownHeadingDelimiter guifg=#cf6a4c guibg=NONE gui=bold
+hi markdownH1 guifg=#9b703f guibg=NONE gui=underline,bold
+hi markdownH2 guifg=#9b703f guibg=NONE gui=italic,bold
+hi markdownH3 guifg=NONE guibg=NONE gui=italic,bold
+hi markdownH4 guifg=NONE guibg=NONE gui=italic,bold
+hi markdownH5 guifg=NONE guibg=NONE gui=italic,bold
+hi markdownCode guifg=#888888 guibg=#222222 gui=NONE
+hi markdownCodeBlock guifg=#888888 guibg=#222222 gui=NONE
+hi markdownListMarker guifg=#9b703f guibg=NONE gui=bold
