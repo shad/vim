@@ -40,3 +40,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = git@github.com:shad/snipmate-snippets.git
+[submodule "bundle/vim-markdown-preview"]
+	path = bundle/vim-markdown-preview
+	url = https://github.com/robgleeson/vim-markdown-preview.git
