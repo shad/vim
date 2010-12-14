@@ -127,3 +127,6 @@ hi markdownH5 guifg=NONE guibg=NONE gui=italic,bold
 hi markdownCode guifg=#888888 guibg=#222222 gui=NONE
 hi markdownCodeBlock guifg=#888888 guibg=#222222 gui=NONE
 hi markdownListMarker guifg=#9b703f guibg=NONE gui=bold
+
+" SQL
+hi sqlKeyword  guifg=#cda869 guibg=NONE gui=NONE
