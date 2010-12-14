@@ -43,6 +43,3 @@
 [submodule "bundle/snipmate.vim"]
 	path = bundle/snipmate.vim
 	url = https://github.com/akitaonrails/snipmate.vim.git
-[submodule "bundle/vim-openurl"]
-	path = bundle/vim-openurl
-	url = git@github.com:shad/vim-openurl.git
