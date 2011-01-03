@@ -1,3 +1,4 @@
+" Mostly taken from http://jeetworks.com/node/89
 function! DelEmptyLineAbove()
     if line(".") == 1
         return
