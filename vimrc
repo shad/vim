@@ -166,3 +166,4 @@ nmap <leader>o :BufExplorer<CR>
 ino jj <esc>
 cno jj <c-c>
 
+autocmd BufNewFile,BufRead *.txt set ft=markdown
