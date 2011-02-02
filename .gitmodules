@@ -46,3 +46,6 @@
 [submodule "bundle/vim-spicy-openurl"]
 	path = bundle/vim-spicy-openurl
 	url = git@github.com:shad/vim-spicy-openurl.git
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
