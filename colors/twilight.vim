@@ -21,7 +21,7 @@ let s:green = '#a2a96f'
 let s:lightgreen = '#c2c98f'
 let s:red = '#d08356'
 let s:cyan = '#74dad9'
-let s:darkgrey = '#1a1a1a'
+let s:darkgrey = '#141414'
 let s:grey = '#303030'
 let s:lightgrey = '#605958'
 let s:white = '#fffedc'
@@ -51,7 +51,7 @@ hi Cursor guibg=#b0d0f0
 
 exe 'hi Normal         guifg='.s:white             .' guibg='.s:darkgrey
 exe 'hi Underlined     guifg='.s:white             .' guibg='.s:darkgrey        .' gui=underline'
-exe 'hi NonText        guifg='.s:lightgrey         .' guibg='.s:grey
+hi NonText  guifg=#2f2f2f guibg=#141414 gui=NONE
 exe 'hi SpecialKey     guifg='.s:grey              .' guibg='.s:darkgrey
 
 exe 'hi LineNr         guifg='.s:mid_grey_blue     .' guibg='.s:dark_grey_blue  .' gui=none'
@@ -111,4 +111,4 @@ hi Search guifg=#606000 guibg=#c0c000 gui=bold
 
 hi Directory guifg=#dad085 gui=NONE
 hi Error guibg=#602020
-
+hi ColorColumn guibg=#202020
