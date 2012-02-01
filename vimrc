@@ -9,6 +9,8 @@
 set nocompatible
 autocmd!
 filetype off
+let $JS_CMD='node'
+
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
@@ -160,10 +162,23 @@ nmap <leader>h :call HexHighlight()<Return>
 " NERDTree helper - Open the current file in NERDTree
 nmap <leader>i :NERDTreeFind<CR>
 " Open the buffer explorer  (MRU Files)
-nmap <leader>o :BufExplorer<CR>
+"nmap <leader>o :BufExplorer<CR>
+nmap <leader>o :CtrlPMRU<CR>
+nmap <leader>O :LustyJuggler<CR>
+nmap <leader>p :CtrlP<CR>
 
 " Use jj to jump out of insert mode (hit quickly)
 ino jj <esc>
 cno jj <c-c>
 
 autocmd BufNewFile,BufRead *.txt set ft=markdown
+
+" Setting for CtrlP
+let g:ctrlp_max_height = 15
+"let g:ctrlp_match_window_bottom = 0
+"let g:ctrlp_match_window_reversed = 0
+"let g:ctrlp_custom_ignore = '\.git$\|build/'
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.yardoc/*,*.exe,*.so,*.dat,*/build/*
+
+" Hate folding
+set nofoldenable
