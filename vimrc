@@ -86,7 +86,8 @@ else
 
 endif
 
-set modelines=0
+set modelines=1
+set modeline
 set encoding=utf-8
 set scrolloff=3       " Keep 3 lines on the screen for context when scrolling
 set noautoindent
@@ -182,3 +183,6 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.yardoc/*,*.exe,*.so,*.dat,*/build/*
 
 " Hate folding
 set nofoldenable
+
+" Make Y act like other capital letters
+map Y y$
