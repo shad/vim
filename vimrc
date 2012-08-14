@@ -31,7 +31,6 @@ set visualbell                " visual error bell
 set ruler                     " show the line number on the bar
 set autoread                  " watch for file changes
 set number                    " line numbers
-set cul                       " show cursor line
 
 " VIM Info File
 set vi=%,'50
@@ -76,13 +75,14 @@ if has("gui_macvim")
 
   let g:VMPoutputdirectory = '.'       " Markdown Preview Output
   let macvim_hig_shift_movement = 1
-
+  set cul                       " show cursor line
 else
 
   " Commandline VI Mode
   highlight clear
   set background=light
   let g:LustyJugglerSuppressRubyWarning = 1
+  set nocul                       " no show cursor line
 
 endif
 
@@ -101,8 +101,6 @@ set backspace=indent,eol,start
 set laststatus=2
 
 set formatoptions=qrn1
-
-set cursorline  " show the current line
 
 " Show invisible chars for tabs and line endings
 set list
