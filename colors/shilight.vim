@@ -7,12 +7,12 @@ let g:colors_name="shilight"
 
 hi Normal         guifg=#F8F8F8           guibg=#141414
 hi Cursor         guifg=#141414           guibg=#d5dcee
-hi CursorLine	  guifg=#424242			  guibg=#d5dcee
+hi CursorLine                             guibg=#171717
 hi Directory      guifg=#8F9D6A           guibg=#141414
 hi VertSplit      guifg=#d5dcee           guibg=#d5dcee
 hi Folded         guifg=#888888           guibg=#282828
-hi FoldColumn	  guifg=#cf6a4c           guibg=#141414     gui=italic
-hi vimFold		  guifg=#f8f8f8			  guibg=#282828     gui=italic
+hi FoldColumn     guifg=#cf6a4c           guibg=#141414     gui=italic
+hi vimFold        guifg=#f8f8f8           guibg=#282828     gui=italic
 hi IncSearch      guifg=#4f94cd           guibg=#f8f8f8
 hi LineNr         guifg=#665f57           guibg=#141414
 hi ModeMsg        guifg=#f9ee98           guibg=#141414
@@ -23,10 +23,11 @@ hi StatusLine     guifg=#0e2231           guibg=#8693a5
 hi StatusLineNC   guifg=#0e2231           guibg=#8693a5
 hi Visual         guifg=#141414           guibg=#d5dcee     gui=italic
 hi WildMenu       guifg=#9b70f3           guibg=#0e2231
-hi MatchParen	  guifg=#f8f8f8		      guibg=#4f94cd
-hi ErrorMsg		  guifg=#cf6a4c           guibg=NONE
-hi WarningMsg	  guifg=#cf6a4c			  guibg=NONE
-hi Title		  guifg=#cf6a4c			  guibg=#141414
+hi MatchParen    guifg=#f8f8f8          guibg=#4f94cd
+hi ErrorMsg      guifg=#cf6a4c           guibg=NONE
+hi WarningMsg    guifg=#cf6a4c        guibg=NONE
+hi Title      guifg=#cf6a4c        guibg=#141414
+hi ColorColumn guibg=#202020
 
 "Syntax hilight groups
 
@@ -43,14 +44,14 @@ hi Identifier     guifg=#7587a6           gui=bold
 hi Statement      guifg=#cda869
 hi Keyword        guifg=#cda869           gui=bold
 hi PreProc        guifg=#7587a6
-hi Type           guifg=#9b859d		      gui=bold		
+hi Type           guifg=#9b859d          gui=bold    
 hi Typedef        guifg=#cda869
 hi Special        guifg=#cda869
 hi SpecialChar    guifg=#7587a6
 hi SpecialComment guifg=#4f94cd
 hi Ignore         guifg=#888888
 hi Error          guifg=#cf6a4c          guibg=NONE         gui=underline
-hi Todo           guifg=#141414			 guibg=#f9ee98
+hi Todo           guifg=#141414       guibg=#f9ee98
 hi Pmenu          guifg=#8693a5          guibg=#0e2231
 hi PmenuSel       guifg=#cda869          guibg=#0e2231
 hi PmenuSbar      guibg=#665f57
