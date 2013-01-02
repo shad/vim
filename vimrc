@@ -62,7 +62,6 @@ nnoremap <leader><space> :noh<cr>
 "vnoremap <tab> %
 
 if has("gui_macvim")
-
   " MacVIM stuff
   set background=dark
   colorscheme tmtwilight
@@ -76,11 +75,14 @@ if has("gui_macvim")
   let g:VMPoutputdirectory = '.'       " Markdown Preview Output
   let macvim_hig_shift_movement = 1
   set cul                       " show cursor line
+  set sh=/bin/sh
 else
 
   " Commandline VI Mode
   highlight clear
-  set background=light
+  set background=dark
+  let g:solarized_termtrans = 1
+  colorscheme solarized
   let g:LustyJugglerSuppressRubyWarning = 1
   set nocul                       " no show cursor line
 
