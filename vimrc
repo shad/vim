@@ -11,6 +11,9 @@ autocmd!
 filetype off
 let $JS_CMD='node'
 
+let NERDTreeQuitOnOpen=1
+let NERDTreeChDirMode=2
+
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
@@ -176,13 +179,38 @@ autocmd BufNewFile,BufRead *.txt set ft=markdown
 
 " Setting for CtrlP
 let g:ctrlp_max_height = 15
-"let g:ctrlp_match_window_bottom = 0
-"let g:ctrlp_match_window_reversed = 0
-"let g:ctrlp_custom_ignore = '\.git$\|build/'
+let g:ctrlp_jump_to_buffer = 0
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.yardoc/*,*.exe,*.so,*.dat,*/build/*
 
 " Hate folding
-set nofoldenable
+"set nofoldenable
+
 
 " Make Y act like other capital letters
 map Y y$
+
+fu! CustomFoldText()
+    "get first non-blank line
+    let fs = v:foldstart
+    while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
+    endwhile
+    if fs > v:foldend
+        let line = getline(v:foldstart)
+    else
+        let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
+    endif
+
+    let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
+    let foldSize = 1 + v:foldend - v:foldstart
+    let foldSizeStr = "   ---- " . foldSize . " lines "
+    "let foldLevelStr = repeat("+--", v:foldlevel)
+    let lineCount = line("$")
+    let foldPercentage = printf("(%.1f", (foldSize*1.0)/lineCount*100) . "%) "
+    "let expansionString = repeat(" ", w - strwidth(foldSizeStr.line.foldPercentage))
+    return line . foldSizeStr . foldPercentage
+endf
+set foldtext=CustomFoldText()
+
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
