@@ -68,7 +68,7 @@ if has("gui_macvim")
   " MacVIM stuff
   set background=dark
   colorscheme tmtwilight
-  set transparency=1
+  "set transparency=1
   set go=egm
   set lines=50
   set guifont=Meslo\ LG\ M\ DZ:h12
@@ -169,10 +169,11 @@ nmap <leader>i :NERDTreeFind<CR>
 "nmap <leader>o :BufExplorer<CR>
 nmap <leader>o :CtrlPMRU<CR>
 nmap <leader>O :LustyJuggler<CR>
-nmap <leader>p :CtrlP<CR>
+"nmap <leader>p :CtrlP<CR>
 
 " Use jj to jump out of insert mode (hit quickly)
 ino jj <esc>
+ino jk <esc>
 cno jj <c-c>
 
 autocmd BufNewFile,BufRead *.txt set ft=markdown
@@ -182,12 +183,9 @@ let g:ctrlp_max_height = 15
 let g:ctrlp_jump_to_buffer = 0
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.yardoc/*,*.exe,*.so,*.dat,*/build/*
 
-" Hate folding
-"set nofoldenable
-
 
 " Make Y act like other capital letters
-map Y y$
+nnoremap Y y$
 
 fu! CustomFoldText()
     "get first non-blank line
@@ -213,4 +211,10 @@ set foldtext=CustomFoldText()
 
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
+
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+let g:ackprg = 'ag --nocolor --nogroup --column'
 

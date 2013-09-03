@@ -55,3 +55,6 @@
 [submodule "bundle/vim-markdown-folding"]
 	path = bundle/vim-markdown-folding
 	url = https://github.com/nelstrom/vim-markdown-folding.git
+[submodule "bundle/vim-jst"]
+	path = bundle/vim-jst
+	url = git@github.com:briancollins/vim-jst.git
