@@ -71,7 +71,7 @@ if has("gui_macvim")
   "set transparency=1
   set go=egm
   set lines=50
-  set guifont=Meslo\ LG\ M\ DZ:h12
+  set guifont=Meslo\ LG\ M\ DZ:h14
   set noundofile
   set colorcolumn=80
 
