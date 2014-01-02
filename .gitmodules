@@ -1,6 +1,9 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = http://github.com/kien/ctrlp.vim.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = http://github.com/tpope/vim-surround.git
@@ -40,6 +43,12 @@
 [submodule "bundle/vim-markdown-preview"]
 	path = bundle/vim-markdown-preview
 	url = git@github.com:shad/vim-markdown-preview.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = http://github.com/kchmck/vim-coffee-script
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = http://github.com/groenewege/vim-less
 [submodule "bundle/snipmate.vim"]
 	path = bundle/snipmate.vim
 	url = https://github.com/akitaonrails/snipmate.vim.git
