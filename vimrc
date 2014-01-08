@@ -17,7 +17,6 @@ let NERDTreeChDirMode=2
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
-syntax on
 
 " I like command-t to be at the top of the window (not the bottom)
 let g:CommandTMatchWindowAtTop=1
@@ -42,7 +41,7 @@ set vi+=n~/.viminfo
 
 " Wrap
 set whichwrap+=<,>,[,]
-set wrap
+set nowrap
 set textwidth=79
 
 " I hate swap files, backup files and undo files.
@@ -61,30 +60,25 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
-"nnoremap <tab> %
-"vnoremap <tab> %
 
-if has("gui_macvim")
-  " MacVIM stuff
-  set background=dark
+" Syntax Stuff
+syntax enable
+highlight clear
+set background=dark
+
+if has("gui_running")
   colorscheme tmtwilight
-  "set transparency=1
   set go=egm
   set lines=50
   set guifont=Meslo\ LG\ M\ DZ:h14
   set noundofile
   set colorcolumn=80
 
-  let g:VMPoutputdirectory = '.'       " Markdown Preview Output
-  let macvim_hig_shift_movement = 1
+  let g:VMPoutputdirectory = '.'" Markdown Preview Output
   set cul                       " show cursor line
   set sh=/bin/sh
 else
-
   " Commandline VI Mode
-  highlight clear
-  set background=dark
-  let g:solarized_termtrans = 1
   colorscheme solarized
   let g:LustyJugglerSuppressRubyWarning = 1
   set nocul                       " no show cursor line
@@ -218,3 +212,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 let g:ackprg = 'ag --nocolor --nogroup --column'
 
+
+" Clipboard functionality
+set clipboard=unnamed
