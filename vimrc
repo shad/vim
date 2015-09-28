@@ -14,7 +14,15 @@ let $JS_CMD='node'
 let NERDTreeQuitOnOpen=1
 let NERDTreeChDirMode=2
 
-call pathogen#runtime_append_all_bundles()
+
+if executable('ag')
+    " Note we extract the column as well as the file and line number
+    set grepprg=ag\ --nogroup\ --nocolor\ --column
+    set grepformat=%f:%l:%c%m
+    let g:ackprg = 'ag --nocolor --nogroup --column'
+endif
+
+execute pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
@@ -210,8 +218,18 @@ vnoremap <Space> zf
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-let g:ackprg = 'ag --nocolor --nogroup --column'
-
 
 " Clipboard functionality
 set clipboard=unnamed
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
