@@ -185,6 +185,10 @@ let g:ctrlp_max_height = 15
 let g:ctrlp_jump_to_buffer = 0
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.yardoc/*,*.exe,*.so,*.dat,*/build/*
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]Resources$',
+  \ }
+
 
 " Make Y act like other capital letters
 nnoremap Y y$
@@ -223,9 +227,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 set clipboard=unnamed
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
