@@ -237,6 +237,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " Clipboard functionality
 set clipboard=unnamed
 
+
 " Syntastic
 "set statusline+=%#warningmsg#
 "set statusline+=%*
@@ -247,3 +248,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
+
+" JSON
+set conceallevel=0
