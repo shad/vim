@@ -118,7 +118,8 @@ if has("gui_running")
   set sh=/bin/sh
 else
   " Commandline VI Mode
-  colorscheme solarized
+  " colorscheme solarized
+  colorscheme tmtwilight
   let g:LustyJugglerSuppressRubyWarning = 1
   set nocul                       " no show cursor line
 
